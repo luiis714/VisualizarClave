@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Password JavaScript</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<input type="password" id="pass">
+	<img id="ojo" style="padding-left: 5px; vertical-align: middle;" src="visible.png" width="20" />
+	
+	<script type="text/javascript">
+		var pass = document.getElementById('pass');
+		var img = document.getElementById('ojo');
+		var visible = false;
+
+		img.onclick = function () {
+			if(visible){
+				//Si está visible lo cambio a password
+				pass.type="password";
+				img.src="visible.png";
+				visible = false;
+			}
+			else{
+				//Si no está visible lo cambio a text
+				pass.type="text";
+				img.src="invisible.png";
+				visible = true;
+			}
+		};
+	</script>
+</body>
+</html>
